@@ -99,9 +99,9 @@
 	<cas.securityContext.casProcessingFilterEntryPoint.loginUrl>https://CSCVIEAH767820:18443/cas/login</cas.securityContext.casProcessingFilterEntryPoint.loginUrl>
 	<cas.securityContext.ticketValidator.casServerUrlPrefix>https://CSCVIEAH767820:18443/cas</cas.securityContext.ticketValidator.casServerUrlPrefix>
   </properties>
-</project>
-<dependency> 
-    <groupId>org.apache.maven.plugins</groupId> 
-    <artifactId>maven-resources-plugin</artifactId> 
-    <version>2.3.2</version> 
-</dependency>
+  </project>
+  <dependency> 
+      <groupId>org.apache.maven.plugins</groupId> 
+      <artifactId>maven-resources-plugin</artifactId> 
+      <version>2.3.2</version> 
+  </dependency>

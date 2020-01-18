@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/integration"
+    xmlns:mail="http://www.springframework.org/schema/integration/mail"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+    	http://www.springframework.org/schema/beans
+    	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    	http://www.springframework.org/schema/integration
+        http://www.springframework.org/schema/integration/spring-integration-3.0.xsd
+        http://www.springframework.org/schema/integration/mail
+        http://www.springframework.org/schema/integration/mail/spring-integration-mail-2.0.xsd
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-2.5.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util-2.5.xsd">
+
+    <context:component-scan base-package="com.csc.integral.integration" />
+
+	<service-activator input-channel="errorChannel" ref="integrationErrorHandler"  method="log" />
+
+	<!-- Mail integration section -->
+	<gateway service-interface="com.csc.integral.integration.Gateways" id="gateways"/>
+	<publish-subscribe-channel id="resetPaswordChannel" />
+	<service-activator input-channel="resetPaswordChannel" ref="mailServiceActivators" method="notifyPasswordReset" />
+	<service-activator input-channel="resetPaswordChannel" ref="consoleServiceActivators" method="notifyPasswordReset" />
+
+	<!-- <mail:outbound-channel-adapter channel="outboundMail" mail-sender="mailSender" /> -->
+
+	<beans:bean id="resetPasswordMailAgent" class="com.csc.integral.mail.MailAgent" >
+		<beans:constructor-arg type="org.springframework.mail.javamail.JavaMailSender" ref="mailSender"/>
+		<beans:property name="templateMailMessage" ref="adminTemplateMail" />
+		<beans:property name="templateLocation" value="/mail-template/resetpassword.vm" />
+	</beans:bean>
+
+	<beans:bean id="adminTemplateMail" class="org.springframework.mail.SimpleMailMessage" >
+		<beans:property name="from" value="underwr1@gmail.com" />
+		<beans:property name="replyTo" value="underwr1@gmail.com" />
+		<beans:property name="subject" value="A message from CSC Integral Administrator" />
+		<beans:property name="to" >
+			<util:list>
+			    <beans:value>underwr1@gmail.com</beans:value>
+			    <beans:value>underwr1@gmail.com</beans:value>
+		    </util:list>
+		</beans:property>
+		<beans:property name="cc" >
+			<util:list>
+				<beans:value>underwr1@gmail.com</beans:value>
+			</util:list>
+		</beans:property>
+		<beans:property name="bcc" >
+			<util:list>
+				<beans:value>underwr1@gmail.com</beans:value>
+			</util:list>
+		</beans:property>
+	</beans:bean>
+
+	<beans:bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl" >
+		<beans:property name="host" value="smtp.gmail.com" />
+		<beans:property name="port" value="587" />
+		<beans:property name="protocol" value="smtp" />
+		<beans:property name="username" value="underwr1@gmail.com" />
+		<beans:property name="password" value="password" />
+		<beans:property name="defaultEncoding" value="utf-8" />
+		
+		<beans:property name="javaMailProperties">
+			<beans:props>
+		        <beans:prop key="mail.smtp.from"></beans:prop>
+		        <beans:prop key="mail.smtp.user"></beans:prop>
+		        <beans:prop key="mail.smtp.host">smtp.gmail.com</beans:prop>
+		        <beans:prop key="mail.smtp.port">587</beans:prop>
+		        <beans:prop key="mail.smtp.auth">true</beans:prop>
+		        <beans:prop key="mail.smtp.starttls.enable">true</beans:prop>
+			</beans:props>
+		</beans:property>
+	</beans:bean>
+
+	<beans:bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+		<beans:property name="velocityProperties">
+			<beans:value>
+				resource.loader=class
+				class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+			</beans:value>
+		</beans:property>
+	</beans:bean>
+
+</beans:beans>

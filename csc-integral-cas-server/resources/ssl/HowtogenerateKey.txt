@@ -1,0 +1,44 @@
+1. Generation:
+   + Open CMD
+   + Run GenerateKey.bat with 2 parameters
+      Para1: ComputerName (it means that name of machine will run CAS server)
+      Para2: FolderName : Folder name that stores certificated key.
+   + Ex: D:\app>GenerateKey.bat CSCVIEAE746704 D:\app
+   + The output file is "cacerts"
+   + Copy this key to $JBOSS_HOME\standalone\configuration\
+2. Enable SSL on JBOSS:
+   + Open standalone.xml in folder $JBOSS_HOME\standalone\configuration\
+   + Point to tag <subsystem xmlns="urn:jboss:domain:web:1.1" default-virtual-server="default-host" native="false"> 
+   + Add this line into this tag above.
+      <connector name="https" protocol="HTTP/1.1" scheme="https" socket-binding="https" secure="true">
+                <ssl password="changeit" certificate-key-file="${jboss.server.config.dir}\cacerts" protocol="TLS" verify-client="false" certificate-file="${jboss.server.config.dir}\cacerts"/>
+      </connector>
+    + Ex:
+       <subsystem xmlns="urn:jboss:domain:web:1.1" default-virtual-server="default-host" native="false">
+            
+           	<connector name="http" protocol="HTTP/1.1" scheme="http" socket-binding="http"/>
+            
+	<connector name="https" protocol="HTTP/1.1" scheme="https" socket-binding="https" secure="true">
+                
+		<ssl password="changeit" certificate-key-file="${jboss.server.config.dir}\cacerts" protocol="TLS" verify-client="false" certificate-file="${jboss.server.config.dir}\cacerts"/>
+	</connector>
+            
+              <virtual-server name="default-host" enable-welcome-root="true">
+                
+              	<alias name="localhost"/>
+                
+		<alias name="example.com"/>
+            
+	</virtual-server>
+            
+	<virtual-server name="life" default-web-module="LifeAsiaWeb.war">
+                
+		<alias name="www.life.com"/>
+            
+	</virtual-server>
+        
+       </subsystem>
+3. Remove file persistence.xml in folder cas.war\WEB-INF\classes\META-INF
+4. Start JBOSS server.
+5. Using InstallCert to import certificated key into JDK
+    Ex: java InstallCert CSCVIEAE746704:8443

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.csc.integral.cas</groupId>
+  <artifactId>cas-parent-pom</artifactId>
+  <packaging>pom</packaging>
+  <name>cas</name>
+  <version>4.0.4</version>
+  <url>http://www.jasig.org/cas/</url>
+  <inceptionYear>2004</inceptionYear>
+
+  <modules>
+    <module>csc-integral-common</module>
+    <module>csc-integral-cas-server</module>
+  </modules>
+
+  <profiles>
+  </profiles>
+
+  <properties>
+    <cs.dir>4.0.4</cs.dir>
+    <issues.projectKey>CAS</issues.projectKey>
+    <spring.webflow.version>2.3.2.RELEASE</spring.webflow.version>
+    <spring.version>3.2.9.RELEASE</spring.version>
+    <ldaptive.version>1.0.6</ldaptive.version>
+    <spring.security.version>3.2.0.RELEASE</spring.security.version>
+    <clover.version>2.6.3</clover.version>
+    <aspectj.version>1.7.2</aspectj.version>
+    <javax.validation.version>1.0.0.GA</javax.validation.version>
+    <perf4j.version>0.9.16</perf4j.version>
+    <commons.jexl.version>1.1</commons.jexl.version>
+    <hibernate.validator.version>4.2.0.Final</hibernate.validator.version>
+    <hibernate.core.version>4.1.0.Final</hibernate.core.version>
+    <slf4j.version>1.7.5</slf4j.version>
+    <person.directory.version>1.5.1</person.directory.version>
+    <servlet.api.version>2.5</servlet.api.version>
+    <jpa.version>2.0-cr-1</jpa.version>
+    <commons.codec.version>1.7</commons.codec.version>
+    <log4j.version>1.2.17</log4j.version>
+    <junit.version>4.11</junit.version>
+    <checkstyle.version>5.6</checkstyle.version>
+    <commons.lang.version>3.1</commons.lang.version>
+    <inspektr.version>1.0.7.GA</inspektr.version>
+    <commons.io.version>2.4</commons.io.version>
+    <mockito.version>1.9.5</mockito.version>
+    <ehcache.version>2.7.2</ehcache.version>
+    <hsqldb.version>2.0.0</hsqldb.version>
+    <joda-time.version>2.2</joda-time.version>
+    <cas-server-security-filter.version>2.0.3</cas-server-security-filter.version>
+
+    <project.build.sourceVersion>1.6</project.build.sourceVersion>
+    <project.build.targetVersion>1.6</project.build.targetVersion>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>    
+	
+	<main.basedir>${project.parent.basedir}</main.basedir>
+	<passwordhistory.database.driverClass>com.microsoft.sqlserver.jdbc.SQLServerDriver</passwordhistory.database.driverClass>
+    <passwordhistory.database.url>jdbc:sqlserver://20.203.133.132:1433;databaseName=INT77SQL2014_SON</passwordhistory.database.url>
+    <passwordhistory.database.user>int-dba</passwordhistory.database.user>
+    <passwordhistory.database.password>vm1dta12#$</passwordhistory.database.password>
+
+    <passwordgenerator.enable>true</passwordgenerator.enable>
+    <passwordgenerator.maxTry>2000</passwordgenerator.maxTry>
+    <passwordgenerator.length>16</passwordgenerator.length>
+
+    <passwordcheck.enable>false</passwordcheck.enable>
+    <passwordcheck.length>8</passwordcheck.length>
+    <passwordcheck.hasNumeric>false</passwordcheck.hasNumeric>
+    <passwordcheck.hasUpperCase>false</passwordcheck.hasUpperCase>
+    <passwordcheck.hasLowerCase>false</passwordcheck.hasLowerCase>
+    <passwordcheck.hasSymbol>false</passwordcheck.hasSymbol>
+    <passwordcheck.hasDifferentSymbols>false</passwordcheck.hasDifferentSymbols>
+    <passwordcheck.differentSymbols>5</passwordcheck.differentSymbols>
+    <passwordcheck.hasDifferentNumbers>false</passwordcheck.hasDifferentNumbers>
+    <passwordcheck.differentNumbers>5</passwordcheck.differentNumbers>
+    <passwordcheck.hasDifferentLetters>false</passwordcheck.hasDifferentLetters>
+    <passwordcheck.differentLetters>5</passwordcheck.differentLetters>
+
+	<ldap.url>ldap://CSCVIEAH767820:389</ldap.url>
+    <ldap.filter>cn=%u,ou=users,ou=portal,dc=dolphin,dc=com</ldap.filter>
+    <ldap.login>cn=Admin,dc=dolphin,dc=com</ldap.login>
+    <ldap.password>root</ldap.password>
+    <ldap.password.daysBeforeExpirationWarning>7</ldap.password.daysBeforeExpirationWarning>
+    <ldap.base.users>ou=users,ou=portal,dc=dolphin,dc=com</ldap.base.users>
+    <ldap.base.ppolicy>ou=ppolicy,dc=dolphin,dc=com</ldap.base.ppolicy>
+    <ldap.ppolicy.default.cn>default</ldap.ppolicy.default.cn>
+	<ldap.authn.searchFilter>cn=underwr1</ldap.authn.searchFilter>
+	<ldap.authn.format>cn=%s,ou=users,ou=portal,dc=dolphin,dc=com</ldap.authn.format>
+
+    <systemUser.list>gng,underwr1,underwr2,underwr3,stang20,root</systemUser.list>
+    
+    <inspektr.database.driverClass>com.microsoft.sqlserver.jdbc.SQLServerDriver</inspektr.database.driverClass>
+    <inspektr.database.url>jdbc:sqlserver://20.203.133.132:1433;databaseName=INT77SQL2014_SON</inspektr.database.url>
+    <inspektr.database.user>int-dba</inspektr.database.user>
+    <inspektr.database.password>vm1dta12#$</inspektr.database.password>
+	<hibernate.dialect>org.hibernate.dialect.SQLServerDialect</hibernate.dialect>
+	
+	<server.name>https://CSCVIEAH767820:18443</server.name>
+	<cas.securityContext.casProcessingFilterEntryPoint.loginUrl>https://CSCVIEAH767820:18443/cas/login</cas.securityContext.casProcessingFilterEntryPoint.loginUrl>
+	<cas.securityContext.ticketValidator.casServerUrlPrefix>https://CSCVIEAH767820:18443/cas</cas.securityContext.ticketValidator.casServerUrlPrefix>
+  </properties>
+</project>

@@ -1,0 +1,313 @@
+/* header title */
+.rb_content_top p {
+	text-align: left;
+	font-weight: bold !important;
+	color: #ffffff !important;
+	font-size: medium !important;
+	margin-left: 15px;
+	
+}
+
+/* change form input style */
+input {
+    background: url("images/bg_input_01.gif") repeat-x scroll left top transparent;
+    border: 1px solid #5085B5;
+    float: left;
+    font-size: 11px;
+    font-weight: normal;
+    height: 16px;
+    padding: 0 2px;
+}
+
+select {
+    background: url("images/bg_input_01.gif") repeat-x scroll left top transparent;
+    border: 1px solid #5085B5;
+    float: left;
+    font-size: 11px;
+    font-weight: normal;
+    height: 18px;
+    padding: 0 2px;
+}
+
+/* Fieldset */
+
+fieldset {
+    border: 2px solid #35759b;
+    padding: 10px 20px 60px 20px;
+
+}
+
+fieldset legend {
+    margin-left: -10px;
+    color: #5487b6;
+    font-size: 14px;
+    padding: 0 8px;
+    font-weight: bold;
+}
+
+/* for table */
+.table  tr th {
+    border: 1px #fff solid;
+    padding: 3px 12px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+}
+
+.table tr td {
+}
+
+.table tr td a {
+    color: #4d81b1;
+}
+
+.table tr.tr1 td {
+    background: #eeeeee;
+    padding: 3px 12px;
+}
+
+/* Row color */
+tr.odd, tr.odd td {
+    background: #FFFFFF;
+}
+
+tr.even, tr.even td {
+    background: #EEEEEE;
+}
+
+.sBase {
+    background-color: #dcdcdc;
+    border: 1px solid #316494;
+}
+
+.sSky {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+}
+
+.sSky th, .sSky td {
+    border: 1px #DDDDDD solid;
+    padding: 3px 6px 3px 4px;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 11px;
+    font-family: Arial;
+}
+
+.sSky th {
+    font-size: 12px;
+    color: white;
+    background-color: #316494
+}
+
+.sSky-Fixed {
+    background-color: #DDDDDD;
+}
+
+.sSky td a div {
+    color: #316494;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border: 0px;
+}
+
+.sSky td a:hover div {
+    color: #316494;
+}
+
+.sSky td div {
+    white-space: nowrap;
+}
+
+/* For link inside table - add class=tablelink */
+a.tablelink {
+    FONT-WEIGHT: bold;
+    CURSOR: pointer;
+    COLOR: #316494;
+    FONT-STYLE: italic
+}
+
+/* for button */
+table.buttontable {
+    width: auto;
+}
+
+.sectionbutton {
+    background: url(images/btn_bg_01.png) no-repeat left top;
+    display: block;
+}
+
+.sectionbutton p {
+    background: url(images/btn_bg_03.png) no-repeat right top;
+}
+
+.sectionbutton a:link, .sectionbutton a:visited, .sectionbutton a:active {
+    display: block;
+    line-height: 22px;
+    margin: 0px 5px; /* leftbg rightbg */
+    background: url(images/btn_bg_02.png) repeat-x;
+    padding: 0px 10px;
+    color: #4d81b1;
+    text-decoration: none;
+}
+
+.sectionbutton a:hover {
+    display: block;
+    line-height: 22px;
+    margin: 0px 5px; /* leftbg rightbg */
+    background: url(images/btn_bg_02.png) repeat-x;
+    padding: 0px 10px;
+    color: #434343;
+    text-decoration: none;
+}
+
+/* Use for tab */
+.selected_tabs_menu .tabwrapper {
+    background: url(images/tab_bg_01.png) no-repeat left top;
+    display: block;
+}
+
+.selected_tabs_menu .tabwrapper p {
+    background: url(images/tab_bg_03.png) no-repeat right top;
+}
+
+.selected_tabs_menu .tabwrapper a, .tabwrapper a:visited, .tabwrapper a:hover, .tabwrapper a:active {
+    display: block;
+    height: 26px; /* modify by funny 20100730 */
+    margin: 0px 15px 0px 8px; /* modify by funny 20100722 */
+    background: url(images/tab_bg_02.png) repeat-x;
+    padding: 5px 3px 0px 10px; /* modify by funny 20100730 */
+    color: #434343;
+    text-decoration: none;
+    font-size: 12px; /* modify by funny 20100722 */
+    line-height: 18px; /* modify by funny 20100730 */
+}
+
+.tabwrapper {
+    background: url(images/tab_bg_04.png) no-repeat left top;
+    display: block;
+}
+
+.tabwrapper p {
+    background: url(images/tab_bg_06.png) no-repeat right top;
+    padding: 0 !important; /* override content_top p style */
+    font-style: normal !important;
+}
+
+.tabwrapper a, .tabwrapper a:visited, .tabwrapper a:active {
+    display: block;
+    height: 26px; /* modify by funny 20100730 */
+    margin: 0px 15px 0px 8px; /* modify by funny 20100722 */
+    background: url(images/tab_bg_05.png) repeat-x;
+    padding: 5px 3px 0px 10px; /* modify by funny 20100730 */
+    color: #434343;
+    text-decoration: none;
+    font-size: 12px; /* modify by funny 20100722 */
+    line-height: 18px; /* modify by funny 20100730 */
+}
+
+.tabwrapper a:hover {
+    display: block;
+    height: 26px; /* modify by funny 20100730 */
+    margin: 0px 15px 0px 8px; /* modify by funny 20100722 */
+    background: url(images/tab_bg_05.png) repeat-x;
+    padding: 5px 3px 0px 10px; /* modify by funny 20100730 */
+    color: #434343;
+    text-decoration: none;
+}
+
+.selected_tabs_menu .tabwrapper a, .selected_tabs_menu .tabwrapper a:visited, .selected_tabs_menu .tabwrapper a:hover, .selected_tabs_menu .tabwrapper a:active {
+    display: block;
+    height: 26px; /* modify by funny 20100730 */
+    margin: 0px 15px 0px 8px; /* modify by funny 20100722 */
+    background: url(images/tab_bg_02.png) repeat-x;
+    padding: 5px 3px 0px 10px; /* modify by funny 20100730 */
+    color: #434343;
+    text-decoration: none;
+    font-size: 12px; /* modify by funny 20100722 */
+    line-height: 18px; /* modify by funny 20100730 */
+}
+
+/* for Pager */
+.UIPageIterator .Number {
+    background-color: white;
+    border: 1px solid #FEFEFE;
+    color: #316494;
+}
+
+.UIPageIterator .PageSelected {
+    color: #F16701;
+    font-weight: bold;
+}
+
+.UIPageIterator .PagesTotalNumber {
+    color: #316494;
+}
+
+.UIPageIterator .TotalPages {
+    color: #316494;
+}
+
+/* Tabs */
+.tab_hidden {
+    display: none;
+    width: 95%;
+}
+
+.tab_view {
+    width: 95%;
+    margin: 20px 10px 10px 10px;
+}
+
+.tabs_menu {
+    float: left;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    Color: white;
+    TEXT-ALIGN: left;
+    display: inline;
+    margin: 12px 0px 5px 15px;
+    /*margin-top: 2px;*/
+    height: 20px;
+}
+
+.tabs_menu .tabItem {
+    width: 150px;
+    height: 20px;
+    background: url(/eXoResources/screenFiles/transparent.gif);
+    background-color: #4d81b1;
+    border-color: white;
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 3px;
+    height: 20px;
+}
+
+.selected_tabs_menu .tabItem {
+    background-color: #eeeeee;
+    COLOR: #346495;
+    border-width: 2px 2px 0px 2px;
+    height: 26px;
+}
+
+.tabs_menu:hover {
+    height: 20px;
+    Cursor: pointer;
+}
+
+.tabs_menu:hover .tabItem {
+    width: 150px;
+    height: 26px;
+    background: url(/eXoResources/screenFiles/transparent.gif);
+    background-color: #849ec6;
+}
+
+.mandatory {
+	color: #FF0000;
+	font-size: 16px;
+}

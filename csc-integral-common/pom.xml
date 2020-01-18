@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.csc.integral.cas</groupId>
+    <artifactId>cas-parent-pom</artifactId>
+    <version>4.0.4</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <artifactId>libs</artifactId>
+  <packaging>pom</packaging>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-install-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>csc-integral-identity</id>
+            <phase>install</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>com.csc.integral</groupId>
+              <artifactId>csc-integral-identity</artifactId>
+              <packaging>jar</packaging>
+              <version>3.0.1</version>
+              <file>${basedir}/libs/csc-integral-identity-3.0.1.jar</file>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>csc-integral-installer</id>
+            <phase>install</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>com.csc.integral</groupId>
+              <artifactId>csc-integral-installer</artifactId>
+              <packaging>jar</packaging>
+              <version>3.0.1</version>
+              <file>${basedir}/libs/csc-integral-installer-3.0.1.jar</file>
+            </configuration>
+          </execution>
+		  
+		  <execution>
+            <id>cas-server-support-ldap</id>
+            <phase>install</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>com.csc.integral</groupId>
+              <artifactId>cas-server-support-ldap</artifactId>
+              <packaging>jar</packaging>
+              <version>4.0.4</version>
+              <file>${basedir}/libs/cas-server-support-ldap-4.0.4.jar</file>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>csc-integral-style</id>
+            <phase>install</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>com.csc.integral</groupId>
+              <artifactId>csc-integral-style</artifactId>
+              <packaging>war</packaging>
+              <version>3.0.1</version>
+              <file>${basedir}/libs/csc-integral-style-3.0.1.war</file>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>csc-integral-dao</id>
+            <phase>install</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>com.csc.integral</groupId>
+              <artifactId>csc-integral-dao</artifactId>
+              <packaging>jar</packaging>
+              <version>3.0.1</version>
+              <file>${basedir}/libs/csc-integral-dao-3.0.1.jar</file>
+            </configuration>
+          </execution>
+
+          <execution>
+            <id>csc-integral-libtcnative</id>
+            <phase>install</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>com.csc.integral</groupId>
+              <artifactId>csc-integral-libtcnative</artifactId>
+              <packaging>zip</packaging>
+              <version>3.0.1</version>
+              <file>${basedir}/libs/csc-integral-libtcnative-3.0.1.zip</file>
+            </configuration>
+          </execution>
+		  
+		  <execution>
+            <id>opensaml-1.1b</id>
+            <phase>install</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>org.opensaml</groupId>
+              <artifactId>opensaml</artifactId>
+              <packaging>jar</packaging>
+              <version>1.1b</version>
+              <file>${basedir}/libs/opensaml-1.1b.jar</file>
+            </configuration>
+          </execution>
+		  
+		  <execution>
+            <id>ojdbc6</id>
+            <phase>install</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>com.oracle</groupId>
+              <artifactId>ojdbc6</artifactId>
+              <packaging>jar</packaging>
+              <version>11.2.0.2.0</version>
+              <file>${basedir}/libs/ojdbc6.jar</file>
+            </configuration>
+          </execution>
+		  
+		  <execution>
+            <id>sqljdbc</id>
+            <phase>install</phase>
+            <goals>
+              <goal>install-file</goal>
+            </goals>
+            <configuration>
+              <groupId>com.microsoft</groupId>
+              <artifactId>sqljdbc</artifactId>
+              <packaging>jar</packaging>
+              <version>4.0</version>
+              <file>${basedir}/libs/sqljdbc-4.0.jar</file>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

@@ -1,0 +1,258 @@
+/* Common */
+html {
+  background-color: white;
+}
+
+.mainView {
+  height: 690px;
+  left: 0;
+  margin-top: 7px;
+  padding: 0;
+  position: static;
+  background-color: white;
+  font-family: Arial;
+  width: 100%;
+}
+
+/* Overriding eXo's styles */
+
+.UIPortal{
+  margin: auto;
+  width:950px;
+}
+
+.Default {
+  background-color: white;
+  text-align: left;
+}
+
+.UIContainer {
+  background-color: white;
+}
+
+#UIContainer-ACMEBanner {
+  background-color: white;
+}
+
+.UIPage {
+  background-color: white;
+  padding: 0px;
+}
+
+#UIContainer-ACMEBanner {
+  background: none repeat scroll 0 0 white;
+  padding: 10px 10px 0;
+}
+
+.UIPageBody  {
+  background-color: white;
+  padding: 0px;
+}
+
+/* Header */
+#headerContainer {
+  height: 50px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#headerContainer #headerLogo {
+  float:left;
+  height: 100%;
+  width: 219px;
+  left: 0;
+  top: 0;
+  background-color: white;
+  padding: 0;
+}
+
+#headerContainer #headerTitle {
+  margin-top: 1px;
+  margin-left: 6px;
+  float: left;
+  height: 32px;
+  width: auto;
+  min-width: 719px;
+  left: 0;
+  right: 0;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #eeeeee;
+  background-position: center;
+  color: white;
+  background-image: url(/eXoResources/screenFiles/roundedBox/bg_title_001.gif);
+  background-repeat: no-repeat;
+  background-position: 0px 2px;
+  BORDER-RIGHT: #4d81b1 1px solid;
+  BORDER-LEFT: #4d81b1 1px solid;
+  BORDER-TOP: #4d81b1 1px solid;
+  BORDER-BOTTOM: #4d81b1 1px solid;
+}
+
+#headerContainer #headerTitle p {
+ float: left;
+ margin-top: 5px;
+ width: 500px;
+ text-align: center;
+}
+
+#headerContainer #headerMenu {
+  float: right;
+  margin-right: 10px;
+  margin-top: 5px;
+  font-size: 12px;
+  text-align: left;
+  height: 50px;
+}
+
+#headerContainer a {
+  font-weight: bold;
+  font-size: 12px;
+  color: white;
+}
+
+/* Footer */
+ #footer {
+  float: left;
+  width: 950px;
+  margin: 5px 0px;
+  padding-top: 10px;
+}
+
+#footer .copyright {
+  font-weight: bold;
+  position: static;
+  width: 954px;
+  height: 32px;
+  text-transform: capitalize;
+  background-color: white;
+  background-image:url(../screenFiles/message.png);
+  background-repeat:no-repeat;
+  padding-top: 8px;
+  text-align: center;
+  font-family: Arial;
+}
+
+.headerTxt p {
+  font-weight: bold;
+  font-size: 16px;
+  font-style: normal;
+}
+
+/* Round-box*/
+
+.rb_content {
+	border-color: #ddd;
+	font-size: 90% !important;
+	background-color: #fff;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+	margin-bottom: 0 !important;
+}
+
+.rb_content_top
+{
+    width: 100%;
+    height: 36px !important;
+    padding-top: 1%;
+    background-repeat: no-repeat;
+    BORDER-RIGHT: #4d81b1 1px solid;
+    BORDER-LEFT: #4d81b1 1px solid;
+}
+
+.rb_content_middle {
+	width: 100%;
+    background-color: #eeeeee;
+    BORDER-RIGHT: #4d81b1 1px solid;
+    BORDER-LEFT: #4d81b1 1px solid;
+}
+
+.rb_content_bottom
+{
+  height: 20px;
+  background-color: white;
+}
+
+.rb_content_bottom  .rb_left{
+  float: left;
+  WIDTH: 22px;
+  HEIGHT: 20px;
+  background-image: url(/eXoResources/screenFiles/roundedBox/bottom_left.PNG);
+  background-repeat: no-repeat;
+}
+
+.rb_content_bottom .rb_right{
+  float: left;
+  WIDTH: 22px;
+  HEIGHT: 20px;
+  background-image: url(/eXoResources/screenFiles/roundedBox/bottom_right.PNG);
+  background-repeat: no-repeat;
+}
+
+.rb_content_bottom_area2
+{
+  float: left;
+  HEIGHT:18px;
+  BORDER-BOTTOM: #4d81b1 1px solid;
+  background-color: #eeeeee;
+  background-image: none;
+}
+
+/* Menu Links */
+.menu li {
+  margin: 0px;
+  font-weight: bold;
+  color: #4D81B1;
+  font-size: 12px;
+  padding: 0px;
+  /*height: 22px;*/
+  width: 98%;
+  vertical-align: middle;
+}
+
+.menu li:hover {
+  background-color: #849ec6;
+  color: white;
+  cursor: pointer;
+}
+
+.menu ul {
+  list-style: none;
+  list-style-position: outside;
+  margin: 5px 0px 0px 15px;
+  padding: 5px;
+  display: inline;
+  float:left;
+  width: 93%;
+  vertical-align: middle;
+}
+
+/* Messages */
+
+.MESSAGE-INFO {
+  color: blue;
+}
+
+.MESSAGE-WARNING {
+  color: yellow;
+}
+
+.MESSAGE-ERROR {
+  color: red;
+}
+
+p.textBold {
+  margin: 0px;
+  color: #4D81B1;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+div.thirdColumn div.rb_content_top p {
+  font-size:16px;
+  font-style:normal;
+  font-weight:bold;
+}
+

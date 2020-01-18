@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+  "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+  <!-- =========================================================  -->
+  <!--              Abstract definitions                          -->
+  <!-- =========================================================  -->
+  <definition name="common" template="/WEB-INF/view/tiles/template/standardLayout.jsp">
+    <put-attribute name="header" value="/WEB-INF/view/tiles/include/header.jsp" />
+    <put-attribute name="sidebar" value="/WEB-INF/view/tiles/include/sidebar.jsp" />
+  </definition>
+
+  <!-- =========================================================  -->
+  <!--              Concrete definitions                          -->
+  <!-- =========================================================  -->
+  <definition name="changePassword" extends="common">
+    <put-attribute name="body" value="/WEB-INF/view/tiles/pms/changePassword.jsp" />
+  </definition>
+
+  <definition name="resetPassword" extends="common">
+    <put-attribute name="body" value="/WEB-INF/view/tiles/pms/resetPassword.jsp" />
+  </definition>
+
+  <definition name="pms" extends="common">
+    <put-attribute name="body" value="/WEB-INF/view/tiles/pms/main.jsp" />
+  </definition>
+
+</tiles-definitions>

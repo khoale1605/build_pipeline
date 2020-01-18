@@ -1,0 +1,76 @@
+#page
+{
+    width: 680px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* HEADER --------------------------------- */
+#header {display:none; position:relative; top:0; left:0; padding-top:52px; background:#fff url(../images/ja-sig-logo.gif) no-repeat scroll 25px 10px;}
+    #header h1#app-name {clear:both; padding:0 0 0 25px; background:#210f7a; color:#fff; font:normal 400 2.8em/2.5em Georgia,"Times New Roman", serif;} /* d21033 */
+
+/* CONTENT --------------------------------- */
+#content {background: url("../images/csc/logon_NEW.jpg") no-repeat top right; padding:0; margin: 80px 0 0 0; width:680px; height:480px;}
+    #content h2 {margin:0 0 .5em 0; font-size:1.3em; font-weight:400; color:#000; xborder-bottom:1px solid #eee; padding:3px 0; xletter-spacing:-1px;}
+    #content h3 {font:1em arial, helvetica, sans-serif; font-weight:400;}
+    #content p {line-height:1.5; font-size:1.1em; padding:0 0 18px;}
+  #content #login {position:relative; top:240px; margin-left: 23px;}
+  #content #login label {font-size:12px; font-weight: bold;}
+  #content #login label span.accesskey {text-decoration:underline;}
+
+/* FOOTER --------------------------------- */
+#footer {display:none; clear:both; position:relative; margin:0 25px 1em; border-top:1px solid #ccc; padding:0 0 1px 0; background:transparent; color:#999;}
+    #footer img#logo {position:absolute; right:0; top:0; margin-top:10px;}
+    #footer div {clear:left; margin:1em 5px .5em; overflow:hidden;}
+
+/* MESSAGES --------------------------------- */
+.info, .success {margin: 30px 27px 0px 23px; padding:20px 20px 20px 100px; font-size:12px; line-height:1.5;} /* ICAS-18 */
+.info {position:relative; top:360px; border:1px dotted 008; background:#eff url(../images/info.gif) no-repeat 20px 18px; color:#008;}
+.errors {margin: 30px 27px 0px 23px; padding:20px 20px 40px 100px; font-size:12px; line-height:1.5; position:relative; top:200px; border:1px dotted #d21033; background:#fed url(../images/error.gif) no-repeat 20px 18px; color:#d21033;} /* ICAS-18 */
+.success {position:relative; top:360px; border:1px dotted #390; background:#dfa url(../images/confirm.gif) no-repeat 20px 18px; color:#390;}
+    #content .errors h2, #content .success h2 {font-family:Georgia,"Times New Roman",Times,serif; font-size:18px; line-height:48px; font-weight:400; margin:0 18px 0 0; padding:0;}
+    #content .success h2 {color: #008 !important;}
+    #content .errors h2 {color:#b00 !important;}
+    #content .success h2 {color:#060 !important;}
+
+
+/* static messages */
+#content #msg p {padding:0;}
+
+/* FORMS --------------------------------- */
+label {cursor:pointer; font-family: Arial, Helvetica, sans-serif;}
+/*
+input.txn-input {font-family: Lucida Console; border:1 solid #ccc; font-size: 11px; border-style:inset; width="10px"; height:14px; padding-top:5px;}
+*/
+input.input_cell {
+	height:18px;
+	background:url(../images/csc/bg_input_01.gif) left top repeat-x;
+	border:#5085b5 1px solid;
+	padding:0 2px;
+	font-size:11px;
+	font-weight:normal;
+	float:left;
+}
+input.red{
+/*height:16px;*//*regulation validation-funny20100720*/
+height:18px;
+background:url(../screenFiles/bg_input_02.gif) left top repeat-x;
+border:#b55050 1px solid;
+padding:0 2px;
+font-weight:normal;
+float:left;
+}
+input.btn-submit {border-width:2px;}
+
+/*.fm-v div.row {float:left; margin:0; padding:.5em 0; width:100%;}*/ /* ICAS-18 */
+.fm-v div.row label {float:left; width:100%; line-height:1.5;}
+.fm-v div.row input.btn-submit {display:block; margin:0;}
+
+
+/* highlight errors */
+input.error {background:#FFEFEF; color:#b00;}
+
+/* mark as required */
+.required {background:#ffd;}
+.error {background:#ffefef;}
+input.required {border-width:1px;}
